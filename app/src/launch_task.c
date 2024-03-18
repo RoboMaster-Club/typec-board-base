@@ -19,7 +19,7 @@ void Launch_Task_Init() {
         .speed_controller_id = 1,
         .offset = 0,
         .control_mode = VELOCITY_CONTROL,
-        .reversal = MOTOR_REVERSAL_NORMAL,
+        .reversal = MOTOR_REVERSAL_REVERSED,
         .velocity_pid =
             {
                 .kp = 500.0f,
@@ -56,8 +56,8 @@ void Launch_Task_Init() {
     // };
 
     Motor_Config_t feed_speed_config = {
-        .can_bus = 2,
-        .speed_controller_id = 7,
+        .can_bus = 1,
+        .speed_controller_id = 3,
         .offset = 0,
         .control_mode = VELOCITY_CONTROL,
         .reversal = MOTOR_REVERSAL_NORMAL,
@@ -116,7 +116,7 @@ void Feed_Angle_Calc()
         //DJI_Motor_Set_Angle(g_feed_angle,g_launch_target.feed_angle);
     }
     else if (g_launch_target.burst_launch_flag) {
-        g_launch_target.feed_velocity = FEED_VELOCITY_15;
+        g_launch_target.feed_velocity = FEED_FREQUENCY_18;
         DJI_Motor_Set_Velocity(g_feed_speed,g_launch_target.feed_velocity);
     }
     else {

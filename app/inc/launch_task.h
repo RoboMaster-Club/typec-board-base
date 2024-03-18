@@ -3,10 +3,12 @@
 
 #include <stdint.h>
 
-#define FLYWHEEL_VELOCITY_30 (7200.0f)
+#define FLYWHEEL_VELOCITY_30 (2.0f )
 #define FEED_HOLE_NUM (6.0f)
 #define FEED_1_PROJECTILE_ANGLE (2.0f*PI/M2006_REDUCTION_RATIO/FEED_HOLE_NUM)
-#define FEED_VELOCITY_15 (5000.0f)
+#define FEED_FREQUENCY_6 (6.0f / FEED_HOLE_NUM * 60.0f)
+#define FEED_FREQUENCY_18 (18.0f / FEED_HOLE_NUM * 60.0f)
+#define FEED_FREQUENCY_30 (30.0f / FEED_HOLE_NUM * 60.0f)
 
 typedef struct
 {

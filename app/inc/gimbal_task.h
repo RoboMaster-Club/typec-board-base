@@ -8,6 +8,7 @@ typedef struct
 {
     float pitch;
     float yaw_velocity;
+    float yaw_angle;
 } Gimbal_Target_t;
 
 // Function prototypes
