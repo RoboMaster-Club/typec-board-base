@@ -18,11 +18,11 @@ void Gimbal_Task_Init()
         .speed_controller_id = 3,
         .offset = 3690,
         .control_mode = POSITION_CONTROL,
-        .reversal = MOTOR_REVERSAL_NORMAL,
-        .use_imu_feedback = 1,
-        .imu_dir = 1,
-        .angle_feedback = &g_imu.rad.yaw,
-        .velocity_feedback = &(g_imu.bmi088_raw.gyro[2]),
+        .motor_reversal = MOTOR_REVERSAL_NORMAL,
+        .use_external_feedback = 1,
+        .external_feedback_dir = 1,
+        .external_angle_feedback_ptr = &g_imu.rad.yaw,
+        .external_velocity_feedback_ptr = &(g_imu.bmi088_raw.gyro[2]),
         .angle_pid =
             {
                 .kp = 20000.0f,
@@ -40,12 +40,12 @@ void Gimbal_Task_Init()
         .can_bus = 2,
         .speed_controller_id = 2,
         .offset = 1500,
-        .use_imu_feedback = 1,
-        .imu_dir = -1,
-        .angle_feedback = &g_imu.rad.roll, // pitch
-        .velocity_feedback = &(g_imu.bmi088_raw.gyro[0]),
+        .use_external_feedback = 1,
+        .external_feedback_dir = -1,
+        .external_angle_feedback_ptr = &g_imu.rad.roll, // pitch
+        .external_velocity_feedback_ptr = &(g_imu.bmi088_raw.gyro[0]),
         .control_mode = VELOCITY_CONTROL | POSITION_CONTROL,
-        .reversal = MOTOR_REVERSAL_NORMAL,
+        .motor_reversal = MOTOR_REVERSAL_NORMAL,
         .angle_pid =
             {
                 .kp = 30.0f,
