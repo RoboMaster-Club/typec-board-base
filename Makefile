@@ -79,29 +79,6 @@ Middlewares/Third_Party/FreeRTOS/Source/timers.c \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c \
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c \
-Hardware-Library/Algo/Src/MahonyAHRS.c \
-Hardware-Library/Algo/Src/pid.c \
-Hardware-Library/Algo/Src/Swerve_Locomotion.c \
-Hardware-Library/BSP/Src/bsp_can.c \
-Hardware-Library/BSP/Src/bsp_delay.c \
-Hardware-Library/BSP/Src/bsp_pwm.c \
-Hardware-Library/BSP/Src/bsp_spi.c \
-Hardware-Library/BSP/Src/bsp_serial.c \
-Hardware-Library/Devices/Src/BMI088driver.c \
-Hardware-Library/Devices/Src/BMI088Middleware.c \
-Hardware-Library/Devices/Src/dji_motor.c \
-Hardware-Library/Devices/Src/dm4310.c \
-Hardware-Library/Devices/Src/ist8310driver.c \
-Hardware-Library/Devices/Src/ist8310driver_middleware.c \
-Hardware-Library/Devices/Src/mf_motor.c \
-Hardware-Library/Devices/Src/remote.c \
-Hardware-Library/Devices/Src/imu_task.c \
-app/src/motor_task.c \
-app/src/chassis_task.c \
-app/src/gimbal_task.c \
-app/src/launch_task.c \
-app/src/debug_task.c \
-app/src/robot.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -166,10 +143,6 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
 -IDrivers/CMSIS/Include \
--IHardware-Library/Algo/Inc \
--IHardware-Library/Devices/Inc \
--IHardware-Library/BSP/Inc \
--Iapp/Inc
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -fdata-sections -ffunction-sections
