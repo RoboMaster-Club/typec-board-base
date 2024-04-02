@@ -25,15 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "tim.h"
-#include "dma.h"
-#include "usart.h"
-#include "gpio.h"
-#include "remote.h"
-#include "bsp_can.h"
-#include "imu_task.h"
-#include "bsp_serial.h"
-#include "dji_motor.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
