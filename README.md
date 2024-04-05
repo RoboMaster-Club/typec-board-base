@@ -17,6 +17,7 @@ Download VSCode from [here](https://code.visualstudio.com/download)
 - The default installation path is `C:\msys64`, run `C:\msys64\msys2.exe`.
 - Install OpenOCD, arm-none-eabi-gcc, and gdb-multiarch by running these commands in MSYS2 terminal.
 ```powershell
+pacman -S mingw-w64-x86_64-make
 pacman -S mingw-w64-x86_64-openocd
 pacman -S mingw-w64-x86_64-arm-none-eabi-gcc
 pacman -S mingw-w64-x86_64-gdb-multiarch
