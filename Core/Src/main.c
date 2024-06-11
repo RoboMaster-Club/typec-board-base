@@ -109,7 +109,6 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   Robot_Init();
-  osDelay(1000);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
