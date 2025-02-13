@@ -72,7 +72,7 @@ unsigned long getRunTimeCounterValue(void);
 /* Functions needed when configGENERATE_RUN_TIME_STATS is on */
 __weak void configureTimerForRunTimeStats(void)
 {
-  HAL_TIM_Base_Start(&htim3);
+  // HAL_TIM_Base_Start(&htim3); // This is initialized in tim.h
 }
 
 __weak unsigned long getRunTimeCounterValue(void)
